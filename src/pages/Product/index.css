@@ -1,3 +1,5 @@
 .product-container{
     margin: 2%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }

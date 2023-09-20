@@ -1,7 +1,37 @@
-/* .card-container{
+.card-container{
+    padding-bottom: 20px;
+}
+
+.truncated-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: prewrap;
+  line-height: 1.2rem;
+  max-height: calc(3 * 1.25rem);
+}
+
+.truncated-text.expanded {
+  max-height: none;
+}
+
+.truncated-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: prewrap;
+    line-height: 1.25rem;
+    height: calc(2*1.35rem); 
+    padding-bottom: 2px;
+  }
+
+.card-btn-body{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: calc(100vh - 80px);
     width: 100%;
-} */
+    height: 100%;
+    padding: 3% 6% ;
+}
+
+.card-btn{
+    width: 45%;
+}
