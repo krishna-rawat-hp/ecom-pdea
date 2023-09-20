@@ -1,0 +1,71 @@
+.log-box-container{
+    /* create a container with backgroud as linear gradient to left use #ab5bda, #da5bb4 colors, height 89.3vh, width 100%, display flex, align item in center */
+    background-image: linear-gradient(to left, #ab5bda , #da5bb4);
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    /* content justify to center */
+    justify-content: center;
+  }
+
+  .log-box {
+    /* generate css with boder 1px solid black, rdius 4px, background color white, padding left-rignt 40px top 10px bottom 30x, text align center width 400px */
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px 40px 30px 40px;
+    text-align: center;
+    width: 400px;
+  }
+
+.log-input-field{
+    width: 100%;
+    padding: 7px;
+    font-weight: 600;
+    border-bottom: 2px solid #333 !important;
+    margin-bottom: 10px ;
+}
+
+.log-input-field:focus {
+    border: none !important;
+    outline: 2px solid #000 !important;
+}
+
+.log-input-field-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: self-start;
+}
+
+.form-label{
+    font-size: 16px;
+    padding-left: 2px;
+    font-weight: bold;
+}
+
+.log-btn {
+    font-weight: 600 !important;
+    width: 40% !important;
+} 
+
+.log-forgot-pass-div{
+    display: flex;
+    align-items: self-start;
+    margin-left: 5%;
+}
+.log-create-acc-div{
+    display: flex;
+    align-items: self-start;
+    margin-left: 5%;
+}
+
+.log-link-forget{
+    text-decoration: none;
+}
+
+.log-link-create-acc{
+    text-decoration: none;
+}

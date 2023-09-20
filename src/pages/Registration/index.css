@@ -1,0 +1,47 @@
+.reg-box-container{
+    /* create a container with backgroud as linear gradient to left use #ab5bda, #da5bb4 colors, height 89.3vh, width 100%, display flex, align item in center */
+    background-image: linear-gradient(to left, #ab5bda , #da5bb4);
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    /* content justify to center */
+    justify-content: center;
+  }
+
+  .reg-box {
+    /* generate css with boder 1px solid black, rdius 4px, background color white, padding left-rignt 40px top 10px bottom 30x, text align center width 400px */
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px 40px 30px 40px;
+    text-align: center;
+    width: 400px;
+  }
+
+
+
+.reg-input-field-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: self-start;
+    margin-bottom: 10px;
+}
+
+.reg-btn {
+    font-weight: 600 !important;
+    width: 40% !important;
+    text-transform: uppercase;
+} 
+
+.reg-already-acc-div{
+    display: flex;
+    align-items: self-start;
+    margin-left: 5%;
+}
+
+.reg-link-already-acc{
+    text-decoration: none;
+}
