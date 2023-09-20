@@ -19,7 +19,7 @@ const Product = () => {
             })
         } */}
         {/* <CardComponent product={productsList[0]} key={productsList[0].id} /> */}
-        {productsList !== undefined  ? <CardComponent product={productsList[0]}/>:<p>Loading...</p>}
+        {productsList.length>0  ? <CardComponent product={productsList[0]}/>:<p>Loading...</p>}
     </div>
   );
 };

@@ -1,7 +1,5 @@
 import Navbar from './Components/Navbar';
-import SignUp from './Components/SignUp';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Components/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Registration from './pages/Registration';
 import Login from './pages/Login';
@@ -25,15 +23,12 @@ function App() {
 
   return (
     <div className="App">
-      
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path='/' element={<SignUp />} />
             <Route path='/registration' element={<Registration />} />
-            <Route path='/product' element={<Product />} />
+            <Route path='/' element={<Product />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/home' element={<Home />} />
           </Routes>
         </BrowserRouter>
     </div>

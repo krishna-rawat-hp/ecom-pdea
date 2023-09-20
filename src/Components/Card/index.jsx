@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import './index.css';
 
-const CardComponent = (product) => {
+const CardComponent = ({product}) => {
 
-    const {id, title, price, description, category, image, rating} = product;
+    const {id, title, price, description, category, image} = product;
 
   return (
     <div className="card-container">
@@ -20,7 +20,7 @@ const CardComponent = (product) => {
         <ListGroup className="list-group-flush">
           <ListGroup.Item>Price: {price}</ListGroup.Item>
           <ListGroup.Item>Category: {category}</ListGroup.Item>
-          <ListGroup.Item>rating: {rating}</ListGroup.Item>
+          <ListGroup.Item>rating: {price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
           <Card.Button>Add to Cart</Card.Button>
