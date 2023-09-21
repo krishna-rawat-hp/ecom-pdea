@@ -1,12 +1,12 @@
+//Import the necessary modules for React, form components, and styles.
 import React, { Component, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button, Form } from "react-bootstrap";
 import "./index.css";
 
-//create a registration Component using functional components and name should be Registration
-
+//Create and export a functional React component called `Registration`.
 export default function Registration() {
-  //create a state for registration form
+  //Create a state variable called `form` using the `useState` hook to manage the form fields (name, email, password, phone).
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -14,7 +14,10 @@ export default function Registration() {
     phone: "",
   });
 
+  // Import the `Link` component and `useNavigate` hook from React Router for navigation.
   const navigate = useNavigate();
+
+  // Implement a function called `onInputChange` to handle input changes and update the `form` state.
 
   const onInputChange = (e) => {
     e.preventDefault();
@@ -26,6 +29,7 @@ export default function Registration() {
     setForm({ ...form, [inputType]: inputValue });
   };
 
+  // Implement a function called `resetForm` to reset the form fields.
   const resetForm =(e)=>{
     e.preventDefault();
     setForm({
@@ -37,18 +41,25 @@ export default function Registration() {
 
   }
 
-  //implement registeruserMethod of form submit
+  //Implement a function called `registerUser` to handle form submission and display an alert upon submission.
   const registerUser = async (e) => {
     e.preventDefault();
     alert("submitted");
   };
 
-  //return a jsx form that contains all these fields and form should be a box which hover on shadow and background should be light grey and should be in center of the page and width will be 30% of whole page size
+
+
   return (
+
+    //Create a container div with class "reg-box-container"
     <div className="reg-box-container">
+      {/* Inside the container div, create a div with class "reg-box" for the registration box. */}
       <div className="reg-box">
+        {/* Add a heading "Registration" with class "login-heading" */}
         <h2 className="mb-4 login-heading">Registration</h2>
+        {/* Create a form with an onSubmit event handler calling the `registerUser` function */}
         <Form onSubmit={registerUser}>
+          {/*  Define form fields for name, email, password, and phone. */}
           <Form.Group
             className="reg-input-field-group"
             controlId="name"
@@ -113,6 +124,8 @@ export default function Registration() {
               placeholder="Enter Phone"
             />
           </Form.Group>
+
+          {/* Add buttons for "Reset" and "Register" with appropriate classes. */}
           <div className="button-right mt-3">
               <Button className="btn btn-danger reg-btn" onClick={resetForm}>reset</Button>
             &nbsp;
@@ -120,6 +133,7 @@ export default function Registration() {
               Register
             </Button>
           </div>
+          {/* Include a link to the login page for users who already have an account */}
           <div className="reg-already-acc-div mt-3">
           <Link className="reg-link-already-acc" to={"/login"}>
               Already have Account? Login here.

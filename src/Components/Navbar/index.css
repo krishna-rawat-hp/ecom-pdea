@@ -1,3 +1,13 @@
+
+/* Define styles for a container class with the following properties:
+- `max-width` of 1100px
+- Margin set to center the container
+- Padding of 10px
+- Display as a flex container with `justify-content` set to `space-between`
+- `align-items` set to `center`
+- `height` set to 100%
+ */
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -7,17 +17,32 @@
     align-items: center;
     height: 100%;
   }
+
+  /* Define styles for a navbar class with the following properties:
+- `height` of 80px
+- `background-color` set to #fef7e5
+- `position` set to relative
+ */
   
   .navbar {
     height: 80px;
     background-color: #fef7e5;
     position: relative;
   }
+
+  /* Define styles for a menu-icon class with `display` set to none.*/
   
   .menu-icon {
     display: none;
   }
   
+  /* Define styles for a nav-elements class with the following properties:
+- `display` set to flex
+- `align-items` set to center
+- `justify-content` set to center
+- `width` set to 75%
+- `height` set to 100%
+ */
   .nav-elements {
     display: flex;
     align-items: center;
@@ -26,11 +51,20 @@
     height: 100%;
 
   }
-
+  /* 
+    Define styles for a nav-pages class with `display` set to flex and `width` set to 50%.
+  */
   .nav-pages{
     display: flex;
     width: 50%;
   }
+
+  /* Define styles for a nav-elements ul with the following properties:
+- `display` set to flex
+- `justify-content` set to space-between
+- `list-style-type` set to none
+- `width` set to 100%
+ */
   
   .nav-elements ul {
     display: flex;
@@ -38,10 +72,20 @@
     list-style-type: none;
     width: 100%;
   }
-  
+  /* Define styles for the list items within the nav-elements ul with `margin-right` set to 60px except for the last child.
+ */
   .nav-elements ul li:not(:last-child) {
     margin-right: 60px;
   }
+
+  /* Define styles for the anchor elements within the nav-elements ul with the following properties:
+- `font-size` of 16px
+- `font-weight` of 400
+- `color` set to #2f234f
+- `text-decoration` set to none
+- `font-size` set to 20px
+- `font-weight` set to 500
+ */
   
   .nav-elements ul a {
     font-size: 16px;
@@ -51,6 +95,19 @@
     font-size: 20px;
     font-weight: 500;
   }
+
+  /* Define styles for anchor elements with the `active` class with the following properties:
+- `color` set to #574c4c
+- `font-weight` set to 500
+- Add a pseudo-element `::after` with the following properties:
+  - `content` set to an empty string
+  - `position` set to absolute
+  - `bottom` set to -4px
+  - `left` set to 0
+  - `width` set to 100%
+  - `height` set to 2px
+  - `background-color` set to #574c4c
+ */
   
   .nav-elements ul a.active {
     color: #574c4c;
@@ -68,6 +125,8 @@
     background-color: #574c4c;
   }
 
+  /* Define styles for brand links with `text-decoration` set to none and `color` set to black. */
+
   .brand-link{
     text-decoration: none;
     color: black;
@@ -77,12 +136,28 @@
     
   }
   
+  /* Inside a media query for (max-width: 768px), adjust the margin-right for list items within the nav-elements ul to 30px.*/
+
   @media (max-width: 768px) {
     .nav-elements ul li:not(:last-child) {
       margin-right: 30px;
     }
     
   }
+
+  /* 
+    Inside a media query for (max-width: 600px), update the styles for mobile navigation:
+    - Display the menu icon (class menu-icon) as block and set cursor to pointer.
+    - Set the nav-elements (class nav-elements) to display inline.
+    - Position the nav-elements absolutely at the top right with a background color of #fef7e5.
+    - Initially, set the width of nav-elements to 0px and animate it with a transition of 0.3s ease-in.
+    - Adjust font size and font weight for better mobile readability.
+    - When the nav-elements has the "active" class, set the width to 270px.
+    - Update the flex direction of the nav-elements ul to column.
+    - Reset margin-right and add margin-top for list items within the nav-elements ul.
+    - Set the nav-pages and nav-cart classes to display inline.
+
+  */
   
   @media (max-width: 600px) {
     .menu-icon {
